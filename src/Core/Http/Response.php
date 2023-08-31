@@ -8,7 +8,7 @@ class Response
 
     private $content;
 
-    private $contentType = "application/json";
+    private $contentType = "application/json; charset=utf-8";
     private $statusCode;
 
     public function __construct($content, $statusCode = 200)
@@ -21,8 +21,7 @@ class Response
     {
 
         $content = $this->content;
-
-        if ($this->contentType === "application/json") {
+        if ($this->contentType === "application/json; charset=utf-8") {
             $content = json_encode($content);
         }
         $this->buildResponse();

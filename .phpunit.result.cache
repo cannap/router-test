@@ -1,0 +1,1 @@
+{"version":1,"defects":[],"times":{"RouterTest::testAddRoute":0.282,"RouterTest::testDispatchWithMatchingRoute":0.021,"RouterTest::testDispatchWithUnknownRoute":0.001,"RouterTest::testUnknownMethod":0,"RouterTest::testDynamicRoute":0.231}}

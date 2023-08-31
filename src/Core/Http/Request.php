@@ -10,7 +10,6 @@ class Request
     private $params = [];
     private $method;
 
-
     /**
      * @param $route
      * @param $method
@@ -21,7 +20,6 @@ class Request
         $this->method = $method;
         $this->params = $params;
         $this->parsedRoute = parse_url($_SERVER['REQUEST_URI']);
-
     }
 
 

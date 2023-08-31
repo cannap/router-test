@@ -13,7 +13,7 @@ $whoops->register();
 use App\Core\Http\Request;
 use App\Core\Router\Router;
 
-//TODO: later we move this in a dedicated router file
+//TODO: move this in a dedicated router file
 $router = new Router();
 
 $router->get('/', function () {

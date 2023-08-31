@@ -19,28 +19,37 @@ final class Router
         //   $this->routeParser = new RouteParser();
     }
 
-    /**
-     * Undocumented function
-     *
-     * @param string $route
-     *
-     * @param  $callback
-     * @return Route
-     */
+
     public function post(string $route, $callback): Route
     {
         return $this->addRoute(Methods::POST, $route, $callback);
     }
 
+    public function delete(string $route, $callback): Route
+    {
+        return $this->addRoute(Methods::DELETE, $route, $callback);
+    }
+
+    public function patch(string $route, $callback): Route
+    {
+        return $this->addRoute(Methods::PATCH, $route, $callback);
+    }
+
+    public function put(string $route, $callback): Route
+    {
+        return $this->addRoute(Methods::PUT, $route, $callback);
+    }
+
 
     /**
-     * Creates a get route
      * @param string $route
      * @param $callback
      * @return Route
      */
     public function get(string $route, $callback): Route
     {
+
+
         return $this->addRoute(Methods::GET, $route, $callback);
     }
 
@@ -136,5 +145,4 @@ final class Router
         return $this->routesCollection;
 
     }
-
 }
