@@ -1,13 +1,12 @@
 <?php
 
+use App\Core\Database\Connection;
 use App\Core\Http\Response;
 
 function dd($any)
 {
-
     var_dump($any);
     die();
-
 }
 
 /**
@@ -18,4 +17,9 @@ function dd($any)
 function response($content, int $statusCode = 200): Response
 {
     return new Response($content, $statusCode);
+}
+
+function db()
+{
+    return new Connection();
 }

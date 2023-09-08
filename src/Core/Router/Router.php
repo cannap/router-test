@@ -13,12 +13,10 @@ final class Router
 
     // protected  $methods = array();
 
-    public function __construct(RouteParser $routeParser = null)
+    public function __construct()
     {
 
-        //   $this->routeParser = new RouteParser();
     }
-
 
     public function post(string $route, $callback): Route
     {
@@ -40,16 +38,8 @@ final class Router
         return $this->addRoute(Methods::PUT, $route, $callback);
     }
 
-
-    /**
-     * @param string $route
-     * @param $callback
-     * @return Route
-     */
     public function get(string $route, $callback): Route
     {
-
-
         return $this->addRoute(Methods::GET, $route, $callback);
     }
 
@@ -124,7 +114,6 @@ final class Router
         $this->prefix = $prefix;
         $callback();
         $this->prefix = '';
-
     }
 
     private function executeRoute(Route $route, $params = []): void
@@ -133,7 +122,6 @@ final class Router
         if ($_SERVER['REQUEST_METHOD'] === $method) {
             $request = new Request($route, $method, $params,);
             $route->run($request);
-
         } else {
             echo "Unknown method";
         }
@@ -143,6 +131,5 @@ final class Router
     public function listRoutes(): array
     {
         return $this->routesCollection;
-
     }
 }

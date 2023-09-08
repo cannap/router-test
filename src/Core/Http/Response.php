@@ -5,9 +5,7 @@ class Response
 {
 
     private $headers = [];
-
     private $content;
-
     private $contentType = "application/json; charset=utf-8";
     private $statusCode;
 
@@ -38,7 +36,6 @@ class Response
         foreach ($this->headers as $key => $value) {
             header("$key: $value");
         }
-
 
         http_response_code($this->statusCode);
 

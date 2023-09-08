@@ -7,7 +7,7 @@ class Request
 {
 
     private $parsedRoute;
-    private $params = [];
+    private $params;
     private $method;
 
     /**

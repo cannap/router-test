@@ -53,6 +53,9 @@ class Route extends RouteParser
 
     public function run(Request $request): void
     {
+
+        header("Access-Control-Allow-Origin: *");
+
         $callback = $this->callback;
         $output = $callback($request);
         if ($output) {

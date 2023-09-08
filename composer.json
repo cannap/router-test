@@ -22,7 +22,9 @@
   "require": {
     "php": ">=7.3.0",
     "filp/whoops": "^2.15",
-    "ext-json": "*"
+    "ext-json": "*",
+    "ext-pdo": "*",
+    "vlucas/phpdotenv": "^5.5"
   },
   "autoload": {
     "psr-4": {
