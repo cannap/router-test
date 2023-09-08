@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpTestFrameworkVersionCache">
+    <tools_cache>
+      <tool tool_name="PHPUnit">
+        <cache>
+          <versions>
+            <info id="LocalW:\private\phppoll\vendor\autoload.php" version="9.6.11" />
+            <info id="interpreter-f93ed0da-21a0-4c1a-970a-b1179f2a4f30" version="9.6.11" />
+          </versions>
+        </cache>
+      </tool>
+    </tools_cache>
+  </component>
+</project>
